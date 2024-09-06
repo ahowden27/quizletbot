@@ -1,5 +1,3 @@
-# Quizlet Matching Bot by pxkka#2906
-
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.options import Options
@@ -10,7 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from credentials import USER, QUIZLETPASS
 
-URL = "https://quizlet.com/776608747/"
+# Insert quizlet url here
+URL = "https://quizlet.com/{id}/"
 
 """
 TIMES
@@ -23,7 +22,9 @@ TIMES
 
 termsList = {}
 x = 0
-PATH = "/Users/misterrobot/Documents/chromedriver"
+
+# Set to your path
+PATH = "/{PATH}/chromedriver"
 chrome_options = Options()
 driver = webdriver.Chrome(PATH)
 driver.get("https://quizlet.com/login")
